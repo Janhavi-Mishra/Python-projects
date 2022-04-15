@@ -26,7 +26,7 @@ if user == 1:
   elif index_outcome == 1: #draw
     user_win = 0   
   else:
-    user_win = -1     
+    user_win = -1    
 
 if user == 2:
   if index_outcome == 1: #Scissors cuts Paper
