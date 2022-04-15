@@ -1,9 +1,9 @@
 #final hangman project
 #import all required modules
 import random
-from replit import clear
 import hangman_art
 import hangman_words
+
 
 #get input for type of list
 type_of_list = input("What word list would you like? \n-> For Classic Novels - press 'N'\n-> For YA Novels - press 'YA'\n-> For Random Words - press 'W'\nInput:- ").lower()
