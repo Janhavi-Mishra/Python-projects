@@ -43,8 +43,6 @@ while not end_of_game:
     
     guess = input("Guess a letter: ").lower() #user input - convert to lower case
 
-    clear() #to clear after every input
-
     #print logo
     print(f"{hangman_art.logo}\n") 
 
