@@ -4,6 +4,18 @@ import random
 import hangman_art
 import hangman_words
 
+class clear:
+ def __call__(self):
+  import os
+  if os.name==('ce','nt','dos'): os.system('cls')
+  elif os.name=='posix': os.system('clear')
+  else: print('\n'*120)
+ def __neg__(self): self()
+ def __repr__(self):
+  self();return ''
+
+clear=clear()
+
 
 #get input for type of list
 type_of_list = input("What word list would you like? \n-> For Classic Novels - press 'N'\n-> For YA Novels - press 'YA'\n-> For Random Words - press 'W'\nInput:- ").lower()
@@ -42,6 +54,8 @@ print(f"{' '.join(display)}\n")
 while not end_of_game:
     
     guess = input("Guess a letter: ").lower() #user input - convert to lower case
+    
+    clear() #clear after every input
 
     #print logo
     print(f"{hangman_art.logo}\n") 
