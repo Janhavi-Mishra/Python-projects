@@ -1,0 +1,30 @@
+# TODO: files system
+file = open("my_file.txt") # to open file
+contents = file.read() # to turn file text to string
+print(contents)
+
+file.close() # we need to close the file to free resources - its like cache
+
+# another method
+
+with open("my_file.txt") as file:
+    contents = file.read()
+    file.write('new text')
+    print(contents)
+    # closes automatically
+
+# to write over the file and also create new files
+with open("my_file.txt", mode="w") as file:
+    file.write('new text')
+
+# to append the file
+with open("my_file.txt", mode="a") as file:
+    file.write('\nnew text')
+
+# TODO: Relative and absolute file path
+
+# root/windows/project/talkppt - absolute file path
+
+# ./talk.ppt - relative file path
+
+# ../report. doc - relative file path when in previous folder
